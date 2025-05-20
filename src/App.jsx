@@ -2,6 +2,7 @@ import { useState } from "react";
 import './App.css'
 import Card from './Components/card/Card'
 import Form from './Components/form/Form'
+import Plan from "./Components/plan/Plan";
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
           <Card/>
         </div>
         <div className='appReste'>
-          <Form/>
+          {/* <Form/> */}
+          <Plan/>
         </div>
 
       </div>

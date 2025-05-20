@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.divPlan{
+    font-family: "Ubuntu";
+}
+.planDiv2{
+    display: flex;
+    gap: 10px;
+    margin-top: 10%;
+}
+.planDiv2Div{
+    border: 1px solid hsl(231, 11%, 63%) ;
+    border-radius: 15px;
+    width: 150px;
+    height: 180px;
+}
+.planDiv2Div:hover{
+    border: 1px solid #ba30ba  ;
+}
+.planDiv1{
+    padding-top: 10%;
+}
+.planImg{
+    margin-top: 15%;
+    margin-left: 10%;
+}
+.planH3Card{
+    margin-left: 10%;
+    color:hsl(213, 88%, 33%) ;
+    margin-bottom: 0;
+    margin-top: 40%;
+}
+.planPCard{
+    margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+    color:hsl(231, 11%, 63%) ;
+}
