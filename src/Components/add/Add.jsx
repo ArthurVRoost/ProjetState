@@ -14,28 +14,28 @@ export default function Add() {
         </div>
         <div className="addons-container">
           <div className="addon-card"style={{backgroundColor: online ? "hsla(230, 13.00%, 91.00%, 0.65)" : "#ffffff",}}onClick={() => setOnline(!online)}>
-                <input type="checkbox" checked={online} onChange={() => setOnline(!online)} onClick={(e) => e.stopPropagation()}/>
+                <input className="check" type="checkbox" checked={online} onChange={() => setOnline(!online)} onClick={(e) => e.stopPropagation()}/>
                 <div className="addon-text">
-                <h3>Online service</h3>
-                <p>Access to multiplayer games</p>
+                <h3 className="addOnH3">Online service</h3>
+                <p className="addOnP">Access to multiplayer games</p>
                 </div>
                 <span className="price1">+$10/yr</span>
           </div>
 
           <div className="addon-card" style={{backgroundColor: storage ? "hsla(230, 13.00%, 91.00%, 0.65)" : "#ffffff",}} onClick={() => setStorage(!storage)}>
-                <input type="checkbox" checked={storage} onChange={() => setStorage(!storage)} onClick={(e) => e.stopPropagation()}/>
+                <input className="check" type="checkbox" checked={storage} onChange={() => setStorage(!storage)} onClick={(e) => e.stopPropagation()}/>
                 <div className="addon-text">
-                <h3>Larger storage</h3>
-                <p>Extra 1TB of cloud save</p>
+                <h3 className="addOnH3">Larger storage</h3>
+                <p className="addOnP">Extra 1TB of cloud save</p>
                 </div>
                 <span className="price2">+$20/yr</span>
           </div>
 
           <div className="addon-card" style={{backgroundColor: profile ? "hsla(230, 13.00%, 91.00%, 0.65)" : "#ffffff",}}onClick={() => setProfile(!profile)}>
-                <input type="checkbox" checked={profile} onChange={() => setProfile(!profile)} onClick={(e) => e.stopPropagation()}/>
+                <input className="check" type="checkbox" checked={profile} onChange={() => setProfile(!profile)} onClick={(e) => e.stopPropagation()}/>
                 <div className="addon-text">
-                <h3>Customizable Profile</h3>
-                <p>Custom theme on your profile</p>
+                <h3 className="addOnH3">Customizable Profile</h3>
+                <p className="addOnP">Custom theme on your profile</p>
                 </div>
                 <span className="price3">+$20/yr</span>
           </div>

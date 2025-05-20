@@ -12,18 +12,34 @@
     margin-top: 5%;
     width: 450px;
 }
+.addon-card:hover{
+    border: #ba30ba 1px solid;
+}
 .price1{
-    margin-left: 20%;
+    margin-left: 15%;
     color: #ba30ba ;
     font-weight: bold;
 }
 .price2{
-    margin-left: 28%;
+    margin-left: 23%;
     color: #ba30ba ;
     font-weight: bold;
 }
 .price3{
-    margin-left: 17%;
+    margin-left: 12%;
     color: #ba30ba ;
     font-weight: bold;
+}
+
+.addOnH3{
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 0;
+}
+
+.addOnP{
+    margin-top: 0;
+    color:hsl(231, 11%, 63%) ;
+}
+.check{
+    margin-left: 5%;
 }
