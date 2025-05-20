@@ -1,7 +1,9 @@
 import './form.css'
-
+import { useState } from "react";
 export default function Form() {
-
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [phone, setPhone] = useState("")
   return (
     <>
       <div className='divForm'>
@@ -11,14 +13,14 @@ export default function Form() {
             </div>
             <div className='formDiv2'>
                 <form>
-                    <label className='labelName' htmlFor="name">Your name is :</label>
-                    <input className='inputName' type="text" id="name" name="name" placeholder="Vingt-Six" required />
+                    <label className='label' htmlFor="name">Your name is : {name}</label>
+                    <input className='inputName' type="text" id="name" name="name" placeholder="Vingt-Six" value={name} onChange={(e) => setName(e.target.value)} required />
 
-                    <label className='labelEmail' htmlFor="email">Your email is :</label>
-                    <input className='inputEmail' type="email" id="email" name="email" placeholder="vingt_six@email.com" required />
+                    <label className='label' htmlFor="email">Your email is : {email}</label>
+                    <input className='inputEmail' type="email" id="email" name="email" placeholder="vingt_six@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
-                    <label className='labelPhone' htmlFor="phone">Your phone number is :</label>
-                    <input className='inputPhone' type="tel" id="phone" name="phone" placeholder="e.g.+1 234 567 890" required />
+                    <label className='label' htmlFor="phone">Your phone number is : {phone} </label>
+                    <input className='inputPhone' type="tel" id="phone" name="phone" placeholder="e.g.+1 234 567 890" value={phone} onChange={(e) => setPhone(e.target.value)} required />
                 </form>
             </div>
             <div className='formDiv3'>

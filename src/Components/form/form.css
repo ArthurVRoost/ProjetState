@@ -1,21 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-.divForm{
-    height: 600px;
-    padding-top: 10%;
-    font-family: "Ubuntu";
+.divForm {
+  height: 600px;
+  padding-top: 10%;
+  font-family: "Ubuntu";
 }
-.formH1{
+.formH1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 5px;
+}
+.formP {
+  color: hsl(231, 11%, 63%);
+  margin: 0;
+  padding: 0;
+}
+.formDiv2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover {
+    border: 2px solid #D2B4D2;
+}
+input::placeholder {
+  color: #aaa;
+}
+
+.label{
     color: hsl(213, 96%, 18%);
-    margin-bottom: 5px;
+    font-weight: bold;
 }
-.formP{
-    color: hsl(231, 11%, 63%) ;
-    margin: 0;
-    padding: 0;
+.formBtn{
+    color: white;
+    background-color:hsl(213, 96%, 18%) ;
+    border-radius: 8px;
+    padding: 15px 25px;
+    outline: none;
+    border: 1px solid;
+    margin-top: 18%;
+    margin-left: 73.5%;
+    cursor: pointer;
+    font-weight: bold;
 }
-.formDiv2{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10%;
+.formBtn:hover{
+    background-color: hsl(243, 100%, 62%);
 }
