@@ -25,6 +25,12 @@
     color: black;
     font-weight: bold;
 }
+.cardDiv.active .cardDivP1 {
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+    font-weight: bold;
+}
+
 .cardDivP2{
     margin: 0;
     padding: 0;

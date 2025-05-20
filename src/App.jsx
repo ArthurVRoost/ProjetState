@@ -62,21 +62,55 @@ function App() {
     let total = 0
 
     if(formData.planType){
-      
+      total += prices[formData.planType]
+    }
+    if(formData.addOns.onlineService){
+      total += prices.onlineService
+    }
+    if(formData.addOns.largerStorage){
+      total += prices.largerStorage
+    }
+    if(formData.addOns.customProfile){
+      total += prices.customProfile
+    }
+    return total;
+  }
+
+  const renderStep = () =>{
+    switch (currentStep) {
+      case 1:
+        return(
+          <Form formData={formData} updateFormData={updateFormData} nextStep={nextStep} />
+        )
+      case 2:
+        return(
+          <Plan formData={formData} updateFormData={updateFormData} nextStep={nextStep} prevStep={prevStep} monthlyPrices={monthlyPrices} yearlyPrices={yearlyPrices}  />
+        )
+      case 3:
+        return(
+          <Add formData={formData} updateFormData={updateFormData} nextStep={nextStep} prevStep={prevStep} monthlyPrices={monthlyPrices} yearlyPrices={yearlyPrices} />
+        )
+      case 4:
+        return(
+          <Finish formData={formData} nextStep={nextStep} prevStep={prevStep} goToStep={goToStep} total={calculateTotal()} monthlyPrices={monthlyPrices} yearlyPrices={yearlyPrices} />
+        )
+      case 5:
+        return(
+          <Thanks/>
+        )
+    
+      default:
+        return <Form formData={formData} updateFormData={updateFormData} nextStep={nextStep} />
     }
   }
   return (
     <>
       <div className='divApp'>
         <div className='appCard'>
-          <Card/>
+          <Card currentStep={currentStep} />
         </div>
         <div className='appReste'>
-          {/* <Form/> */}
-          {/* <Plan/> */}
-          {/* <Add/> */}
-          {/* <Finish/> */}
-          {/* <Thanks/> */}
+          {renderStep()}
         </div>
 
       </div>
