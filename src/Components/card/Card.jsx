@@ -1,0 +1,51 @@
+import './card.css'
+import PhotoCard from "/src/assets/img/sidebar.svg"
+
+export default function Card() {
+    return(
+        <>
+        <div className='divCardP'>
+            <img className='cardImg' src={PhotoCard} alt="" />
+            <div className='divCard1'>
+                 <div className='cardDiv'>
+                    <p className='cardDivP1'>1</p>
+                    <div className='cardDivDiv'>
+                        <p className='cardDivP2'>STEP 1</p>
+                        <p className='cardDivP3'>YOUR INFO</p>
+                    </div>
+                
+                </div>
+
+                <div className='cardDiv'>
+                    <p className='cardDivP1'>2</p>
+                    <div className='cardDivDiv'>
+                        <p className='cardDivP2'>STEP 2</p>
+                        <p className='cardDivP3'>SELECT PLAN</p>
+                    </div>
+                    
+                </div>
+
+                <div className='cardDiv'>
+                    <p className='cardDivP1'>3</p>
+                    <div className='cardDivDiv'>
+                        <p className='cardDivP2'>STEP 3</p>
+                        <p className='cardDivP3'>ADD-ONS</p>
+                    </div>
+                    
+                </div>
+
+                <div className='cardDiv'>
+                    <p className='cardDivP1'>4</p>
+                    <div className='cardDivDiv'>
+                        <p className='cardDivP2'>STEP 4</p>
+                        <p className='cardDivP3'>SUMMARY</p>
+                    </div>
+                    
+                </div>
+            </div>
+           
+            
+        </div>
+        </>
+    )
+}
