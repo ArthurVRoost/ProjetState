@@ -3,6 +3,7 @@ import './App.css'
 import Card from './Components/card/Card'
 import Form from './Components/form/Form'
 import Plan from "./Components/plan/Plan";
+import Add from "./Components/add/Add";
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
         </div>
         <div className='appReste'>
           {/* <Form/> */}
-          <Plan/>
+          {/* <Plan/> */}
+          <Add/>
         </div>
 
       </div>
