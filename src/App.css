@@ -1,3 +1,15 @@
 body{
     background-color: hsl(217, 100%, 97%) ;
 }
+.divApp{
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    width: 900px;
+    margin-left: 20%;
+    gap: 50px;
+}
+.appCard{
+    margin-top: 3%;
+    margin-left: 3%;
+}
