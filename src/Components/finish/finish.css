@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.divFinish{
+    font-family: "Ubuntu";
+    padding-top: 10%;
+}
+.finishDiv2Div1{
+    display: flex;
+    align-items: center;
+    
+}
+.finishDiv2Div2{
+    display: flex;
+}
+.finishDiv2{
+    width: 400px;
+    background-color:hsl(217, 100%, 97%) ;
+    margin-top: 10%;
+    border-radius: 5px;
+    height: 200px;
+}
+.finishDiv5H3{
+    color:hsl(214, 96%, 35%) ;
+    margin-bottom: 0;
+    margin-left: 15%;
+}
+.finishDiv5P{
+    margin-left: 15%;
+    color:hsl(231, 11%, 63%) ;
+    text-decoration: underline;
+    margin-top: 0;
+    cursor: pointer;
+}
+.finishDiv2Div1P{
+    margin-left: 40%;
+    color: hsl(214, 96%, 35%) ;
+    font-weight: bold;
+}
