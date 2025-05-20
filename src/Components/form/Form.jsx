@@ -2,9 +2,9 @@ import './form.css'
 import { useState } from "react";
 
 export default function Form({formData, updateFormData, nextStep}) {
-    const [name, setName] = useState(formData.name || "")
-    const [email, setEmail] = useState(formData.email || "")
-    const [phone, setPhone] = useState(formData.phone || "")
+    const [name, setName] = useState(formData.name )
+    const [email, setEmail] = useState(formData.email )
+    const [phone, setPhone] = useState(formData.phone )
     const [errors, setErrors] = useState({name: false, email:false, phone:false})
 
     const handleSubmit = (e) => {
