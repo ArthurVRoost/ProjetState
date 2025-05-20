@@ -3,7 +3,36 @@
 .divCardP{
     font-family: "Ubuntu";
     color: white;
+    margin-top: -90%;
 }
 .divCard1{
     margin-top: -200%;
+}
+.cardDiv{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.cardDivP1{
+    margin-left: 15%;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+.cardDivP1:hover{
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+    font-weight: bold;
+}
+.cardDivP2{
+    margin: 0;
+    padding: 0;
+    color: hsl(229, 24%, 87%);
+    font-size: 13px;
+}
+.cardDivP3{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
 }
