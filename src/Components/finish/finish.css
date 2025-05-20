@@ -9,9 +9,7 @@
     align-items: center;
     
 }
-.finishDiv2Div2{
-    display: flex;
-}
+
 .finishDiv2{
     width: 400px;
     background-color:hsl(217, 100%, 97%) ;
@@ -30,9 +28,31 @@
     text-decoration: underline;
     margin-top: 0;
     cursor: pointer;
+    font-size: 14px;
 }
 .finishDiv2Div1P{
     margin-left: 40%;
     color: hsl(214, 96%, 35%) ;
     font-weight: bold;
+}
+.finishDiv2Div2{
+    display: flex;
+    gap: 30px;
+}
+.finishDiv2Div2{
+    margin-top: 5%;
+    border-top: 1px solid hsl(229, 24%, 87%);
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.finishDiv2Div2P1{
+    color:hsl(231, 11%, 63%) ;
+    margin-top: 12%;
+}
+.finishDiv2Div2P2{
+    color: hsl(214, 96%, 35%);
+    font-weight: bold;
+    margin-left: 42%;
+    margin-top: 12%;
 }
