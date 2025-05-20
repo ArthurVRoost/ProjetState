@@ -15,7 +15,7 @@
     background-color:hsl(217, 100%, 97%) ;
     margin-top: 10%;
     border-radius: 5px;
-    height: 200px;
+    height: 180px;
 }
 .finishDiv5H3{
     color:hsl(214, 96%, 35%) ;
@@ -48,11 +48,24 @@
 
 .finishDiv2Div2P1{
     color:hsl(231, 11%, 63%) ;
-    margin-top: 12%;
+    margin-top: 10%;
 }
 .finishDiv2Div2P2{
     color: hsl(214, 96%, 35%);
     font-weight: bold;
     margin-left: 42%;
-    margin-top: 12%;
+    margin-top: 10%;
+}
+.finishDiv3{
+    display: flex;
+}
+.finishDiv3P1{
+    color:hsl(231, 11%, 63%);
+    margin-left: 5%;
+}
+.finishDiv3P2{
+    color:hsl(243, 100%, 62%) ;
+    margin-left: 35%;
+    font-weight: bold;
+    font-size: 20px;
 }

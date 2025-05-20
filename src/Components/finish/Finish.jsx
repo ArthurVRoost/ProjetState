@@ -26,11 +26,13 @@ export default function Finish() {
             </div>
 
             <div className='finishDiv3'>
-
+                <p className='finishDiv3P1'>Total (per month)</p>
+                <p className='finishDiv3P2'>$11/mo</p>
             </div>
 
-            <div className='finishDiv4'>
-
+            <div className='planDiv4'>
+                <p className='planDiv4P addP4'>Go Back</p>
+                <button className='planBtn addBtn4'>Next Step</button>
             </div>
         </div>
         </>
