@@ -40,6 +40,10 @@ export default function Add() {
                 <span className="price3">+$20/yr</span>
           </div>
         </div>
+        <div className='planDiv4'>
+                <p className='planDiv4P addP4'>Go Back</p>
+                <button className='planBtn addBtn4'>Next Step</button>
+        </div>
       </div>
     </>
   );
