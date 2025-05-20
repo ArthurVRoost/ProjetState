@@ -31,8 +31,8 @@ export default function Finish() {
             </div>
 
             <div className='planDiv4'>
-                <p className='planDiv4P addP4'>Go Back</p>
-                <button className='planBtn addBtn4'>Next Step</button>
+                <p className='planDiv4P finishP4'>Go Back</p>
+                <button className='planBtn finishBtn4'>Confirm</button>
             </div>
         </div>
         </>
