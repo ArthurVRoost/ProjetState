@@ -60,10 +60,10 @@ input::placeholder {
 }
 @media (max-width: 576px) {
   .divForm{
-    height: 400px;
+    height: 300px;
   }
   .formDiv1{
-    margin-top: -30%;
+    margin-top: -55%;
     text-align: center;
   }
   .formDiv2{
@@ -80,10 +80,10 @@ input::placeholder {
 }
 @media (min-width: 577px) and (max-width:775px)  {
      .divForm{
-    height: 400px;
+    height: 100px;
   }
   .formDiv1{
-    margin-top: -20%;
+    margin-top: -80%;
     text-align: center;
   }
   .formDiv2{
@@ -96,6 +96,6 @@ input::placeholder {
   }
   .formBtn{
     padding: 10px 40px;
-    margin-left: 90%;
+    margin-left: 80%;
   }
 }

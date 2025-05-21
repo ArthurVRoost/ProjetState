@@ -126,7 +126,7 @@ input:checked + .slider:before {
 
 @media (max-width: 576px) {
     .divPlan{
-        margin-top: -30%;
+        margin-top: -55%;
     }
     .planDiv1{
         text-align: center;
@@ -152,7 +152,7 @@ input:checked + .slider:before {
 }
 @media (min-width: 577px) and (max-width:775px)  {
        .divPlan{
-        margin-top: -20%;
+        margin-top: -80%;
     }
     .planDiv1{
         text-align: center;
@@ -174,5 +174,8 @@ input:checked + .slider:before {
     }
     .planBtn{
         margin-left: 55%;
+    }
+    .planDiv4{
+        margin-bottom: -550%;
     }
 }
