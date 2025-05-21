@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./add.css";
 
-export default function Add({ formData, updateFormData, nextStep, prevStep, monthlyPrices, yearlyPrices }) {
+export default function Add({ formData, updateFormData, nextStep, prevStep, prixMensuel, prixAnnuel }) {
     const [online, setOnline] = useState(formData.addOns.onlineService || false);
     const [storage, setStorage] = useState(formData.addOns.largerStorage || false);
     const [profile, setProfile] = useState(formData.addOns.customProfile || false);
@@ -17,8 +17,8 @@ export default function Add({ formData, updateFormData, nextStep, prevStep, mont
         nextStep();
     };
 
-    const prices = formData.isYearly ? yearlyPrices : monthlyPrices;
-    const priceLabel = formData.isYearly ? '/yr' : '/mo';
+    const prix = formData.annuellement ? prixAnnuel : prixMensuel;
+    const prixText = formData.annuellement ? '/yr' : '/mo';
 
     return (
         <div className="divAdd">
@@ -43,7 +43,7 @@ export default function Add({ formData, updateFormData, nextStep, prevStep, mont
                         <h3 className="addOnH3">Online service</h3>
                         <p className="addOnP">Access to multiplayer games</p>
                     </div>
-                    <span className="price1">+${prices.onlineService}{priceLabel}</span>
+                    <span className="price1">+${prix.onlineService}{prixText}</span>
                 </div>
 
                 <div 
@@ -62,7 +62,7 @@ export default function Add({ formData, updateFormData, nextStep, prevStep, mont
                         <h3 className="addOnH3">Larger storage</h3>
                         <p className="addOnP">Extra 1TB of cloud save</p>
                     </div>
-                    <span className="price2">+${prices.largerStorage}{priceLabel}</span>
+                    <span className="price2">+${prix.largerStorage}{prixText}</span>
                 </div>
 
                 <div 
@@ -81,7 +81,7 @@ export default function Add({ formData, updateFormData, nextStep, prevStep, mont
                         <h3 className="addOnH3">Customizable Profile</h3>
                         <p className="addOnP">Custom theme on your profile</p>
                     </div>
-                    <span className="price3">+${prices.customProfile}{priceLabel}</span>
+                    <span className="price3">+${prix.customProfile}{prixText}</span>
                 </div>
             </div>
                 <div className='planDiv4 addDiv4'>

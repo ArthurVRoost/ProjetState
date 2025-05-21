@@ -12,7 +12,7 @@ export default function Form({formData, updateFormData, nextStep}) {
 
         const newErrors = {
             name: name.trim() === '',
-            email: !email.includes('@') || email.trim() === '',
+            email: !email.includes('@') ,
             phone: phone.trim() === ''
         };
 

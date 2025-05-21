@@ -1,16 +1,16 @@
 import './finish.css'
 
-export default function Finish({ formData, nextStep, prevStep, goToStep, total, monthlyPrices, yearlyPrices }) {
+export default function Finish({ formData, nextStep, prevStep, goToStep, total, prixMensuel, prixAnnuel }) {
 
-    const prices = formData.isYearly ? yearlyPrices : monthlyPrices;
-    const priceLabel = formData.isYearly ? '/yr' : '/mo';
-    const periodLabel = formData.isYearly ? 'yearly' : 'monthly';
-    const totalPeriod = formData.isYearly ? 'per year' : 'per month';
+    const prix = formData.annuellement ? prixAnnuel : prixMensuel;
+    const prixText = formData.annuellement ? '/yr' : '/mo';
+    const periodLabel = formData.annuellement ? 'yearly' : 'monthly';
+    const totalPeriod = formData.annuellement ? 'per year' : 'per month';
     
    
     const getPlanName = () => {
-        if (!formData.planType) return "No plan selected";
-        return formData.planType.charAt(0).toUpperCase() + formData.planType.slice(1);
+        if (!formData.planCard) return "No plan selected";
+        return formData.planCard.charAt(0).toUpperCase() + formData.planCard.slice(1);
     };
 
    
@@ -19,19 +19,19 @@ export default function Finish({ formData, nextStep, prevStep, goToStep, total, 
         if (formData.addOns.onlineService) {
             selected.push({
                 name: "Online Service",
-                price: prices.onlineService
+                price: prix.onlineService
             });
         }
         if (formData.addOns.largerStorage) {
             selected.push({
                 name: "Larger Storage",
-                price: prices.largerStorage
+                price: prix.largerStorage
             });
         }
         if (formData.addOns.customProfile) {
             selected.push({
                 name: "Customizable Profile",
-                price: prices.customProfile
+                price: prix.customProfile
             });
         }
         return selected;
@@ -53,7 +53,7 @@ export default function Finish({ formData, nextStep, prevStep, goToStep, total, 
                         <h3 className='finishDiv5H3'>{getPlanName()}({periodLabel})</h3>
                         <p className='finishDiv5P' onClick={() => goToStep(2)}>Change</p>
                     </div>
-                    <p className='finishDiv2Div1P'>${formData.planType ? prices[formData.planType] : 0}{priceLabel}</p>
+                    <p className='finishDiv2Div1P'>${formData.planCard ? prix[formData.planCard] : 0}{prixText}</p>
                 </div>
 
                 {selectedAddOns.length > 0 && (
@@ -61,7 +61,7 @@ export default function Finish({ formData, nextStep, prevStep, goToStep, total, 
                         {selectedAddOns.map((addon, index) => (
                             <div className='finishDiv2Div2' key={index}>
                                 <p className='finishDiv2Div2P1'>{addon.name}</p>
-                                <p className='finishDiv2Div2P2'>+${addon.price}{priceLabel}</p>
+                                <p className='finishDiv2Div2P2'>+${addon.price}{prixText}</p>
                             </div>
                         ))}
                     </>
@@ -70,7 +70,7 @@ export default function Finish({ formData, nextStep, prevStep, goToStep, total, 
 
             <div className='finishDiv3'>
                 <p className='finishDiv3P1'>Total ({totalPeriod})</p>
-                <p className='finishDiv3P2'>${total}{priceLabel}</p>
+                <p className='finishDiv3P2'>${total}{prixText}</p>
             </div>
 
             <div className='planDiv4'>

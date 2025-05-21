@@ -14,8 +14,8 @@ function App() {
     email: "",
     phone: "", 
 
-    planType: null,
-    isYearly: false,
+    planCard: null,
+    annuellement: false,
 
     addOns: {
       onlineService: false,
@@ -24,7 +24,7 @@ function App() {
     }
   })
 
-  const monthlyPrices = {
+  const prixMensuel = {
     arcade: 9,
     advanced: 12,
     pro: 15,
@@ -33,7 +33,7 @@ function App() {
     customProfile: 2
   }
 
-  const yearlyPrices = {
+  const prixAnnuel = {
     arcade: 90,
     advanced: 120,
     pro: 150,
@@ -58,20 +58,20 @@ function App() {
   }
 
   const calculateTotal = () =>{
-    const prices = formData.isYearly ? yearlyPrices : monthlyPrices;
+    const prix = formData.annuellement ? prixAnnuel : prixMensuel;
     let total = 0
 
-    if(formData.planType){
-      total += prices[formData.planType]
+    if(formData.planCard){
+      total += prix[formData.planCard]
     }
     if(formData.addOns.onlineService){
-      total += prices.onlineService
+      total += prix.onlineService
     }
     if(formData.addOns.largerStorage){
-      total += prices.largerStorage
+      total += prix.largerStorage
     }
     if(formData.addOns.customProfile){
-      total += prices.customProfile
+      total += prix.customProfile
     }
     return total;
   }
@@ -84,15 +84,15 @@ function App() {
         )
       case 2:
         return(
-          <Plan formData={formData} updateFormData={updateFormData} nextStep={nextStep} prevStep={prevStep} monthlyPrices={monthlyPrices} yearlyPrices={yearlyPrices}  />
+          <Plan formData={formData} updateFormData={updateFormData} nextStep={nextStep} prevStep={prevStep} prixMensuel={prixMensuel} prixAnnuel={prixAnnuel}  />
         )
       case 3:
         return(
-          <Add formData={formData} updateFormData={updateFormData} nextStep={nextStep} prevStep={prevStep} monthlyPrices={monthlyPrices} yearlyPrices={yearlyPrices} />
+          <Add formData={formData} updateFormData={updateFormData} nextStep={nextStep} prevStep={prevStep} prixMensuel={prixMensuel} prixAnnuel={prixAnnuel} />
         )
       case 4:
         return(
-          <Finish formData={formData} nextStep={nextStep} prevStep={prevStep} goToStep={goToStep} total={calculateTotal()} monthlyPrices={monthlyPrices} yearlyPrices={yearlyPrices} />
+          <Finish formData={formData} nextStep={nextStep} prevStep={prevStep} goToStep={goToStep} total={calculateTotal()} prixMensuel={prixMensuel} prixAnnuel={prixAnnuel} />
         )
       case 5:
         return(

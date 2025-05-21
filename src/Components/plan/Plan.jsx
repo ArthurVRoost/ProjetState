@@ -4,20 +4,20 @@ import Advanced from '/src/assets/img/advenced.svg'
 import Arcade from '/src/assets/img/arcade.svg'
 import Pro from '/src/assets/img/pro.svg'
 
-export default function Plan({ formData, updateFormData, nextStep, prevStep, monthlyPrices, yearlyPrices }) {
+export default function Plan({ formData, updateFormData, nextStep, prevStep, prixMensuel, prixAnnuel }) {
     
-    const [selected, setSelected] = useState(formData.planType || null);
-    const [isYearly, setIsYearly] = useState(formData.isYearly || false);
+    const [selected, setSelected] = useState(formData.planCard || null);
+    const [annuellement, setAnnuellement] = useState(formData.annuellement || false);
 
     
     const handleNext = () => {
        
-        updateFormData({ planType: selected, isYearly });
+        updateFormData({ planCard: selected, annuellement });
         nextStep();
     };
 
-    const prices = isYearly ? yearlyPrices : monthlyPrices;
-    const priceLabel = isYearly ? '/yr' : '/mo';
+    const prix = annuellement ? prixAnnuel : prixMensuel;
+    const prixText = annuellement ? '/yr' : '/mo';
 
     return(
         <div className='divPlan'>
@@ -34,7 +34,7 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
                 >
                     <img className='planImg' src={Arcade} alt="" />
                     <h3 className='planH3Card'>Arcade</h3>
-                    <p className='planPCard'>${prices.arcade}{priceLabel}</p>
+                    <p className='planPCard'>${prix.arcade}{prixText}</p>
                    
                 </div>
 
@@ -45,7 +45,7 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
                 >
                     <img className='planImg' src={Advanced} alt="" />
                     <h3 className='planH3Card'>Advanced</h3>
-                    <p className='planPCard'>${prices.advanced}{priceLabel}</p>
+                    <p className='planPCard'>${prix.advanced}{prixText}</p>
                    
                 </div>
 
@@ -56,22 +56,22 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
                 >
                     <img className='planImg' src={Pro} alt="" />
                     <h3 className='planH3Card'>Pro</h3>
-                    <p className='planPCard'>${prices.pro}{priceLabel}</p>
+                    <p className='planPCard'>${prix.pro}{prixText}</p>
                     
                 </div>
             </div>
 
             <div className='planDiv3'>
-                <h3 className={`planDiv3H31 ${!isYearly ? 'active-billing' : ''}`}>Monthly</h3>
+                <h3 className={`planDiv3H31 ${!annuellement ? 'active-billing' : ''}`}>Monthly</h3>
                 <label className="switch">
                     <input 
                         type="checkbox" 
-                        checked={isYearly} 
-                        onChange={() => setIsYearly(!isYearly)} 
+                        checked={annuellement} 
+                        onChange={() => setAnnuellement(!annuellement)} 
                     />
                     <span className="slider" />
                 </label>
-                <h3 className={`planDiv3H32 ${isYearly ? 'active-billing' : ''}`}>Yearly</h3>
+                <h3 className={`planDiv3H32 ${annuellement ? 'active-billing' : ''}`}>Yearly</h3>
             </div>
 
             <div className='planDiv4'>
