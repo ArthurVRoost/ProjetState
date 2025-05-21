@@ -42,3 +42,18 @@
     padding: 0;
     font-weight: bold;
 }
+
+@media (max-width: 576px) {
+    .divCardP{
+        margin-left: 10%;
+    }
+    .cardImg{
+        height: 500px;
+        width: 250px;
+    }
+    .divCard1{
+        margin-top: -60%;
+        margin-left: -10%;
+        font-size: 12px;
+    }
+}
