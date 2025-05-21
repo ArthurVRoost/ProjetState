@@ -78,3 +78,24 @@ input::placeholder {
     padding: 10px 40px;
   }
 }
+@media (min-width: 577px) and (max-width:775px)  {
+     .divForm{
+    height: 400px;
+  }
+  .formDiv1{
+    margin-top: -20%;
+    text-align: center;
+  }
+  .formDiv2{
+    width: 500px;
+    margin-left: 10%;
+  }
+  .formDiv3{
+    text-align: center;
+    margin-right: 50%;
+  }
+  .formBtn{
+    padding: 10px 40px;
+    margin-left: 90%;
+  }
+}

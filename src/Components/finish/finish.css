@@ -96,3 +96,19 @@
         margin-left: 45%;
     }
 }
+@media (min-width: 577px) and (max-width:775px)  {
+     .finishDiv2{
+        margin-left: 15%;
+    }
+    .finishDiv3{
+        margin-left: 13%;
+    }
+    .finishP4{
+        margin-top: 15%;
+        margin-left: 17%;
+    }
+    .finishBtn4{
+        margin-top: 12%;
+        margin-left: 38%;
+    }
+}

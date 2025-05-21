@@ -46,7 +46,7 @@
 @media (max-width: 576px) {
     .divCardP{
         margin-left: 20%;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .cardImg{
         height: 500px;
@@ -56,5 +56,20 @@
         margin-top: -120%;
         margin-left: -5%;
         font-size: 12px;
+    }
+}
+@media (min-width: 577px) and (max-width:775px)  {
+    .divCardP{
+        margin-left: 26%;
+        margin-top: 5%;
+    }
+    .cardImg{
+        height: 550px;
+        width: 250px;
+    }
+    .divCard1{
+        margin-top: -110%;
+        margin-left: -5%;
+        font-size: 15px;
     }
 }

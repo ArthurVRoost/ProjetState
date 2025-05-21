@@ -150,3 +150,29 @@ input:checked + .slider:before {
         margin-left: 55%;
     }
 }
+@media (min-width: 577px) and (max-width:775px)  {
+       .divPlan{
+        margin-top: -20%;
+    }
+    .planDiv1{
+        text-align: center;
+    }
+    .planDiv2{
+        width: 550px;
+        margin-left: 10%;
+    }
+    .planDiv3{
+        width: 450px;
+        margin-left: 12%;
+    }
+    .planDiv4{
+        margin-top: -5%;
+        margin-bottom: 10%;
+    }
+    .planDiv4P{
+        margin-left: 5%;
+    }
+    .planBtn{
+        margin-left: 55%;
+    }
+}

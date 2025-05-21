@@ -64,3 +64,18 @@
         margin-left: 55%;
     }
 }
+@media (min-width: 577px) and (max-width:775px)  {
+    .addons-container{
+        margin-left: 13%;
+    }
+    .addP4{
+        margin-top: 15%;
+        margin-bottom: 10%;
+        margin-left: 13%;
+    }
+    .addBtn4{
+        margin-top: 12%;
+        margin-bottom: 10%;
+        margin-left: 47%;
+    }
+}
