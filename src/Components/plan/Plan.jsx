@@ -11,10 +11,7 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
 
     
     const handleNext = () => {
-        if (!selected) {
-            alert("Please select a plan before continuing.");
-            return;
-        }
+       
         updateFormData({ planType: selected, isYearly });
         nextStep();
     };
@@ -38,7 +35,7 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
                     <img className='planImg' src={Arcade} alt="" />
                     <h3 className='planH3Card'>Arcade</h3>
                     <p className='planPCard'>${prices.arcade}{priceLabel}</p>
-                    {isYearly && <p className='planBonus'>2 months free</p>}
+                   
                 </div>
 
                 <div 
@@ -49,7 +46,7 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
                     <img className='planImg' src={Advanced} alt="" />
                     <h3 className='planH3Card'>Advanced</h3>
                     <p className='planPCard'>${prices.advanced}{priceLabel}</p>
-                    {isYearly && <p className='planBonus'>2 months free</p>}
+                   
                 </div>
 
                 <div 
@@ -60,7 +57,7 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, mon
                     <img className='planImg' src={Pro} alt="" />
                     <h3 className='planH3Card'>Pro</h3>
                     <p className='planPCard'>${prices.pro}{priceLabel}</p>
-                    {isYearly && <p className='planBonus'>2 months free</p>}
+                    
                 </div>
             </div>
 
