@@ -84,7 +84,7 @@ export default function Add({ formData, updateFormData, nextStep, prevStep, mont
                     <span className="price3">+${prices.customProfile}{priceLabel}</span>
                 </div>
             </div>
-                <div className='planDiv4'>
+                <div className='planDiv4 addDiv4'>
                 <p className='planDiv4P addP4' onClick={prevStep}>Go Back</p>
                 <button className='planBtn addBtn4' onClick={handleNext}>Next Step</button>
             </div>

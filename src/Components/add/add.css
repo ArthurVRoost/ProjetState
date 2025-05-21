@@ -50,3 +50,16 @@
     margin-top: 25%;
     margin-left: 60%;
 }
+@media (max-width: 576px) {
+    .addons-container{
+        margin-left: 3%;
+    }
+    .addP4{
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+    .addBtn4{
+        margin-top: 12%;
+        margin-bottom: 10%;
+    }
+}
