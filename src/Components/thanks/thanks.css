@@ -24,3 +24,11 @@
     color:hsl(228, 4%, 73%) ;
     margin-top: 0;
 }
+@media (max-width: 576px) {
+    .divThanks{
+        margin-top: -20%;
+        text-align: center;
+        margin-left: 7%;
+        margin-bottom: 8%;
+    }
+}
