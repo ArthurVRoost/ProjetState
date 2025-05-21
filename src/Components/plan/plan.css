@@ -123,3 +123,23 @@ input:checked + .slider:before {
     font-size: 17px;
     color: hsl(213, 96%, 18%);
 }
+
+@media (max-width: 576px) {
+    .divPlan{
+        margin-top: -30%;
+    }
+    .planDiv1{
+        text-align: center;
+    }
+    .planDiv2{
+        width: 450px;
+        margin-left: 3%;
+    }
+    .planDiv3{
+        width: 400px;
+        margin-left: 8%;
+    }
+    .planDiv4{
+        margin-top: -5%;
+    }
+}
