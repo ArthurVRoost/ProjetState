@@ -33,7 +33,7 @@ input[type="tel"] {
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="tel"]:hover {
-    border: 2px solid #D2B4D2;
+    border: 1px solid #ba30ba;
 }
 input::placeholder {
   color: #aaa;
