@@ -4,11 +4,13 @@ import { useState } from "react";
 
 // FONCTIONS
 export default function Form({formData, updateFormData, nextStep}) {
+  // CONST 
     const [name, setName] = useState(formData.name )
     const [email, setEmail] = useState(formData.email )
     const [phone, setPhone] = useState(formData.phone )
     const [errors, setErrors] = useState({name: false, email:false, phone:false})
-
+  
+    // POUR EVITER LE REFRESH + VERIFIE + ou - que l'utilisateur rentre des données logique 
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -19,7 +21,7 @@ export default function Form({formData, updateFormData, nextStep}) {
         };
 
         setErrors(newErrors);
-
+        // SI PAS D'ERREUR IL UPDATE ET PEUT NEXT STEP
         if (!newErrors.name && !newErrors.email && !newErrors.phone) {
             updateFormData({ name, email, phone });
             nextStep();
@@ -35,40 +37,13 @@ export default function Form({formData, updateFormData, nextStep}) {
         <div className='formDiv2'>
           <form onSubmit={handleSubmit}>
             <label className='label' htmlFor="name">Your name is : {name}</label>
-            <input
-              className={`inputName ${errors.name ? "error" : ""}`}
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Vingt-Six"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
+            <input className={`inputName ${errors.name ? "error" : ""}`} type="text" id="name" name="name" placeholder="Vingt-Six" value={name} onChange={(e) => setName(e.target.value)} required/>
 
             <label className='label' htmlFor="email">Your email is : {email}</label>
-            <input
-              className={`inputEmail ${errors.email ? 'error' : ''}`}
-              type="email"
-              id="email"
-              name="email"
-              placeholder="vingt_six@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <input className={`inputEmail ${errors.email ? 'error' : ''}`} type="email" id="email" name="email" placeholder="vingt_six@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required/>
 
             <label className='label' htmlFor="phone">Your phone number is : {phone} </label>
-            <input
-              className={`inputPhone ${errors.phone ? 'error' : ''}`}
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="e.g.+1 234 567 890"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
+            <input className={`inputPhone ${errors.phone ? 'error' : ''}`} type="tel" id="phone" name="phone" placeholder="e.g.+1 234 567 890" value={phone} onChange={(e) => setPhone(e.target.value)} required/>
           </form>
         </div>
         <div className='formDiv3'>

@@ -9,7 +9,7 @@ export default function Card({ currentStep }) {
       <div className='divCardP'>
         <img className='cardImg' src={PhotoCard} alt="" />
         <div className='divCard1'>
-          
+          {/* Donne la classe active quand il est dans le bon step(classe active dans le css) */}
           <div className={`cardDiv ${currentStep === 1 ? 'active' : ''}`}>
             <p className='cardDivP1'>1</p>
             <div className='cardDivDiv'>

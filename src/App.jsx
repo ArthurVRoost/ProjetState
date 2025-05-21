@@ -10,6 +10,7 @@ import Thanks from "./Components/thanks/Thanks";
 
 // FONCTIONS
 function App() {
+  // le 1 est important pour le switch qui vient apres
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState({
     name: "",
@@ -25,7 +26,7 @@ function App() {
       customProfile: false
     }
   })
-
+  // 2 objets
   const prixMensuel = {
     arcade: 9,
     advanced: 12,
@@ -43,7 +44,8 @@ function App() {
     largerStorage: 20,
     customProfile: 20
   }
-
+  
+  // gere les boutons next et go back 
   const nextStep = () =>{
     setCurrentStep(currentStep + 1)
   }
@@ -58,7 +60,8 @@ function App() {
   const goToStep = (step) =>{
     setCurrentStep(step)
   }
-
+  
+  //calcule 
   const calculateTotal = () =>{
     const prix = formData.annuellement ? prixAnnuel : prixMensuel;
     let total = 0
@@ -78,6 +81,7 @@ function App() {
     return total;
   }
 
+  // SWITCH CASE, j'assigne une valeure a chaque etape du formulaire pour aller facilement de l'un a l'autre le default est la page de base
   const renderStep = () =>{
     switch (currentStep) {
       case 1:
@@ -100,7 +104,7 @@ function App() {
         return(
           <Thanks/>
         )
-    
+      
       default:
         return <Form formData={formData} updateFormData={updateFormData} nextStep={nextStep} />
     }

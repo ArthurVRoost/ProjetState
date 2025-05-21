@@ -7,19 +7,20 @@ import Pro from '/src/assets/img/pro.svg'
 
 // FONCTIONS
 export default function Plan({ formData, updateFormData, nextStep, prevStep, prixMensuel, prixAnnuel }) {
-    
+    // CONST
     const [selected, setSelected] = useState(formData.planCard || null);
     const [annuellement, setAnnuellement] = useState(formData.annuellement || false);
 
-    
+    // UPDATE EN FONCTION DE TON CHOIX
     const handleNext = () => {
        
         updateFormData({ planCard: selected, annuellement });
         nextStep();
     };
-
+    
+    // AFFICHE LE BON PRIX EN FONCTION DE TON CHOIX ANNUEL OU MENSUEL 
     const prix = annuellement ? prixAnnuel : prixMensuel;
-    const prixText = annuellement ? '/yr' : '/mo';
+    const prixText = annuellement ? "/yr" : "/mo";
 
     return(
         <div className='divPlan'>
@@ -29,33 +30,21 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, pri
             </div>
 
             <div className='planDiv2'>
-                <div 
-                    className='planDiv2Div' 
-                    onClick={() => setSelected("arcade")} 
-                    style={{ backgroundColor: selected === "arcade" ? "hsla(229, 24.20%, 87.10%, 0.70)" : "#ffffff" }}
-                >
+                <div className='planDiv2Div'  onClick={() => setSelected("arcade")}  style={{ backgroundColor: selected === "arcade" ? "hsla(229, 24.20%, 87.10%, 0.70)" : "#ffffff" }}>
                     <img className='planImg' src={Arcade} alt="" />
                     <h3 className='planH3Card'>Arcade</h3>
                     <p className='planPCard'>${prix.arcade}{prixText}</p>
                    
                 </div>
 
-                <div 
-                    className='planDiv2Div' 
-                    onClick={() => setSelected("advanced")} 
-                    style={{ backgroundColor: selected === "advanced" ? "hsla(229, 24.20%, 87.10%, 0.70)" : "#ffffff" }}
-                >
+                <div className='planDiv2Div' onClick={() => setSelected("advanced")}  style={{ backgroundColor: selected === "advanced" ? "hsla(229, 24.20%, 87.10%, 0.70)" : "#ffffff" }}>
                     <img className='planImg' src={Advanced} alt="" />
                     <h3 className='planH3Card'>Advanced</h3>
                     <p className='planPCard'>${prix.advanced}{prixText}</p>
                    
                 </div>
 
-                <div 
-                    className='planDiv2Div' 
-                    onClick={() => setSelected("pro")} 
-                    style={{ backgroundColor: selected === "pro" ? "hsla(229, 24.20%, 87.10%, 0.70)" : "#ffffff" }}
-                >
+                <div className='planDiv2Div' onClick={() => setSelected("pro")}  style={{ backgroundColor: selected === "pro" ? "hsla(229, 24.20%, 87.10%, 0.70)" : "#ffffff" }}>
                     <img className='planImg' src={Pro} alt="" />
                     <h3 className='planH3Card'>Pro</h3>
                     <p className='planPCard'>${prix.pro}{prixText}</p>
@@ -66,11 +55,8 @@ export default function Plan({ formData, updateFormData, nextStep, prevStep, pri
             <div className='planDiv3'>
                 <h3 className={`planDiv3H31 ${!annuellement ? 'active-billing' : ''}`}>Monthly</h3>
                 <label className="switch">
-                    <input 
-                        type="checkbox" 
-                        checked={annuellement} 
-                        onChange={() => setAnnuellement(!annuellement)} 
-                    />
+                    {/* INPUT EST ANNUELLEMENT PARCE QUE MIS PAR DEFAULT EN FALSE ET POUR CA QUE LES PRIX MONTHLY SONT AFFICHE ET PAS YEARLY */}
+                    <input type="checkbox" checked={annuellement} onChange={() => setAnnuellement(!annuellement)} />
                     <span className="slider" />
                 </label>
                 <h3 className={`planDiv3H32 ${annuellement ? 'active-billing' : ''}`}>Yearly</h3>
