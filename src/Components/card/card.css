@@ -45,15 +45,16 @@
 
 @media (max-width: 576px) {
     .divCardP{
-        margin-left: 10%;
+        margin-left: 20%;
+        margin-top: 10%;
     }
     .cardImg{
         height: 500px;
         width: 250px;
     }
     .divCard1{
-        margin-top: -60%;
-        margin-left: -10%;
+        margin-top: -120%;
+        margin-left: -5%;
         font-size: 12px;
     }
 }

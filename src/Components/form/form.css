@@ -58,3 +58,23 @@ input::placeholder {
 .formBtn:hover{
     background-color: hsl(243, 100%, 62%);
 }
+@media (max-width: 576px) {
+  .divForm{
+    height: 400px;
+  }
+  .formDiv1{
+    margin-top: -30%;
+    text-align: center;
+  }
+  .formDiv2{
+    width: 400px;
+    margin-left: 10%;
+  }
+  .formDiv3{
+    text-align: center;
+    margin-right: 50%;
+  }
+  .formBtn{
+    padding: 10px 40px;
+  }
+}
