@@ -1,9 +1,11 @@
+// IMPORTS
 import { useState } from 'react'
 import './plan.css'
 import Advanced from '/src/assets/img/advenced.svg'
 import Arcade from '/src/assets/img/arcade.svg'
 import Pro from '/src/assets/img/pro.svg'
 
+// FONCTIONS
 export default function Plan({ formData, updateFormData, nextStep, prevStep, prixMensuel, prixAnnuel }) {
     
     const [selected, setSelected] = useState(formData.planCard || null);

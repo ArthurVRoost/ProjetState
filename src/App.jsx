@@ -1,3 +1,4 @@
+// IMPORTS
 import { useState } from "react";
 import './App.css'
 import Card from './Components/card/Card'
@@ -7,6 +8,7 @@ import Add from "./Components/add/Add";
 import Finish from "./Components/finish/Finish";
 import Thanks from "./Components/thanks/Thanks";
 
+// FONCTIONS
 function App() {
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState({

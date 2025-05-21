@@ -1,6 +1,8 @@
+// IMPORTS
 import './card.css'
 import PhotoCard from "/src/assets/img/sidebar.svg"
 
+// FONCTIONS
 export default function Card({ currentStep }) {
   return (
     <>

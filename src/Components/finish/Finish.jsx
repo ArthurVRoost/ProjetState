@@ -1,5 +1,7 @@
+// IMPORTS
 import './finish.css'
 
+// FONCTIONS
 export default function Finish({ formData, nextStep, prevStep, goToStep, total, prixMensuel, prixAnnuel }) {
 
     const prix = formData.annuellement ? prixAnnuel : prixMensuel;

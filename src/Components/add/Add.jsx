@@ -1,6 +1,8 @@
+// IMPORTS
 import { useState } from "react";
 import "./add.css";
 
+// FONCTIONS
 export default function Add({ formData, updateFormData, nextStep, prevStep, prixMensuel, prixAnnuel }) {
     const [online, setOnline] = useState(formData.addOns.onlineService || false);
     const [storage, setStorage] = useState(formData.addOns.largerStorage || false);

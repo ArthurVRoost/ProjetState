@@ -1,6 +1,8 @@
+// IMPORTS
 import './form.css'
 import { useState } from "react";
 
+// FONCTIONS
 export default function Form({formData, updateFormData, nextStep}) {
     const [name, setName] = useState(formData.name )
     const [email, setEmail] = useState(formData.email )

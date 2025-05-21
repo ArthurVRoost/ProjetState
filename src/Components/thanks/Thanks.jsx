@@ -1,7 +1,9 @@
+// IMPORTS
 import { useState } from 'react'
 import './thanks.css'
 import PhotoThanks from '/src/assets/img/thankyou.svg'
 
+// FONCTIONS
 export default function Thanks() {
     return(
         <>
