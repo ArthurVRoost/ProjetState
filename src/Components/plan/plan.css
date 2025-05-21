@@ -143,4 +143,10 @@ input:checked + .slider:before {
         margin-top: -5%;
         margin-bottom: 10%;
     }
+    .planDiv4P{
+        margin-left: 5%;
+    }
+    .planBtn{
+        margin-left: 55%;
+    }
 }

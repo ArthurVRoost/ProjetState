@@ -79,3 +79,20 @@
     margin-left: 58%;
     margin-top: 30%;
 }
+
+@media (max-width: 576px) {
+    .finishDiv2{
+        margin-left: 8%;
+    }
+    .finishDiv3{
+        margin-left: 8%;
+    }
+    .finishP4{
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+    .finishBtn4{
+        margin-top: 12%;
+        margin-left: 45%;
+    }
+}
